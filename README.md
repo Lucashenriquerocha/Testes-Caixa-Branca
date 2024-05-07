@@ -1,14 +1,24 @@
-# Testes-Caixa-Branca
+JavaDoc para o Projeto Login
+Este projeto inclui uma classe Java para gerenciar operações de login e verificação de usuário usando um banco de dados MySQL. O JavaDoc é uma ferramenta poderosa para gerar documentação do código-fonte Java automaticamente.
 
-Este é um projeto Java que implementa um sistema básico de login utilizando JDBC para se conectar a um banco de dados MySQL. No entanto, há alguns erros no código que precisam ser corrigidos:
-
-Erro na Classe do Driver MySQL:
-A classe do driver MySQL está incorretamente especificada. Para corrigir, substitua "com.mysql.Driver.Manager" por "com.mysql.jdbc.Driver".
-Tratamento de Exceção Ausente:
-Dentro dos blocos catch, não há tratamento específico para as exceções. Recomenda-se adicionar e.printStackTrace() ou System.out.println(e.getMessage()) para depuração e rastreamento de erros.
-Vazamento de Recursos:
-A conexão com o banco de dados não é fechada após o uso, o que pode levar a vazamento de recursos. Adicione conn.close() ao final do método verificarUsuario() para fechar a conexão corretamente.
-Vulnerabilidade de Injeção SQL:
-O código atual concatena diretamente os valores dos parâmetros login e senha na consulta SQL, tornando-o vulnerável a ataques de injeção SQL. Em vez disso, use prepared statements para evitar essa vulnerabilidade.
-Código Desnecessário:
-As variáveis nome e result não são necessárias como variáveis de classe. Elas podem ser definidas dentro do método verificarUsuario().
+Como Gerar a Documentação
+Clone o Repositório: Clone este repositório para o seu ambiente local.
+bash
+Copy code
+git clone https://github.com/seu-usuario/login-project.git
+Execute o Javadoc: Navegue até o diretório do projeto e execute o comando Javadoc para gerar a documentação.
+bash
+Copy code
+javadoc -d docs login/*.java
+Isso criará um diretório docs contendo a documentação gerada.
+Navegue pela Documentação: Abra o arquivo index.html localizado no diretório docs em um navegador da web para navegar pela documentação JavaDoc.
+Estrutura do Projeto
+login/LoginManager.java: Contém a classe Java para gerenciar operações de login.
+docs/: Diretório que conterá a documentação JavaDoc gerada.
+Navegando pela Documentação
+LoginManager: Esta classe fornece métodos para conectar ao banco de dados MySQL, verificar usuários e gerenciar informações de login.
+conectarBD(): Método para conectar ao banco de dados.
+verificarUsuario(String login, String senha): Método para verificar as credenciais de login fornecidas.
+Variáveis de instância: nome (Nome do usuário logado) e result (Resultado da verificação de usuário).
+Contribuindo
+Sinta-se à vontade para enviar pull requests com melhorias ou correções para este projeto.
