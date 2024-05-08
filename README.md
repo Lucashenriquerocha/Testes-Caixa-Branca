@@ -35,3 +35,7 @@ Este projeto inclui uma classe Java para gerenciar operações de login e verifi
 ## Contribuindo
 
 Sinta-se à vontade para enviar pull requests com melhorias ou correções para este projeto.
+
+##Fluxo
+
+![image](https://github.com/Lucashenriquerocha/Testes-Caixa-Branca/assets/112584046/9f618831-bc2d-416d-9ec9-9ece1d5e5e42)
